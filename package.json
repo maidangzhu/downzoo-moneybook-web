@@ -1,0 +1,28 @@
+{
+  "name": "downzoo-moneybook-web",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "classnames": "^2.3.1",
+    "dayjs": "^1.10.7",
+    "lib-flexible": "^0.3.2",
+    "postcss-pxtorem": "^6.0.0",
+    "react": "^16.13.1",
+    "react-captcha-code": "^1.0.7",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "zarm": "^2.8.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-refresh": "^1.3.1",
+    "less": "^4.1.1",
+    "vite": "^2.1.5",
+    "vite-plugin-imp": "^2.0.7",
+    "vite-plugin-style-import": "^0.10.1"
+  }
+}
