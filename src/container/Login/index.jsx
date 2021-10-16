@@ -18,7 +18,6 @@ const Login = () => {
   const [captcha, setCaptcha] = useState(''); // 验证码变化后存储值
 
   const handleCaptchaChange = useCallback((captcha) => {
-    console.log('captcha', captcha)
     setCaptcha(captcha)
   }, []);
 
@@ -45,6 +44,7 @@ const Login = () => {
         if (data) {
           localStorage.setItem('token', data?.token || '');
           Toast.show('登录成功');
+          window.location.href = '/';
         }
       } else {
         if (!checkboxStat) {
