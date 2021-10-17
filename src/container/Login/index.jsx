@@ -59,19 +59,23 @@ const Login = () => {
           Toast.show('验证码错误')
           return
         }
-        const data = await post('/api/user/register', {
+        await post('/api/user/register', {
           username,
           password
         });
 
-        if (data) {
-          Toast.show('注册成功');
-          setType('login');
-        }
+        Toast.show('注册成功');
+        setType('login');
+
       }
     } catch (e) {
-      console.error(e);
-      Toast.show('系统错误');
+      if (e.msg) {
+        console.error(e.msg);
+        Toast.show(e.msg);
+      } else {
+        console.error(e);
+        Toast.show('系统错误');
+      }
     }
   };
 

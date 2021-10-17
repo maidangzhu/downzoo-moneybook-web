@@ -20,14 +20,18 @@ const Account = (props) => {
         console.log(value)
         if (value.newpass !== value.newpass2) {
           Toast.show('新密码输入不一致');
-          return
+          return;
         }
-        await post('/api/user/modify_pass', {
+
+        const data = await post('/api/user/modify_pass', {
           old_pass: value.oldpass,
           new_pass: value.newpass,
           new_pass2: value.newpass2
         })
-        Toast.show('修改成功')
+
+        if (data) {
+          Toast.show('修改成功');
+        }
       }
     });
   }

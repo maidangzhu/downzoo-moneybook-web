@@ -18,6 +18,7 @@ axios.interceptors.response.use(res => {
   if (res.data.code !== 200) {
     if (res.data.msg) {
       Toast.show(res.data.msg); // 所有接口层面的报错都统一拦截处理
+      return Promise.reject(res.data);
     }
     if (res.data.code === 401) { // unauthorized
       window.location.href = '/login';

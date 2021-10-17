@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Button, FilePicker, Input, Toast} from 'zarm';
 import {useHistory} from 'react-router-dom';
 import {get, post, imgUrlTrans} from '@/utils';
-import {baseUrl} from 'config';
+import {baseUrl} from '@/config';
 import axios from 'axios';
 
 import Header from '@/components/Header';
@@ -37,7 +37,7 @@ const UserInfo = () => {
     formData.append('file', file.file);
     axios({
       method: 'post',
-      url: `${baseUrl}/upload`,
+      url: `${baseUrl}/api/upload`,
       data: formData,
       headers: {
         'Content-Type': 'multipart/form-data',
