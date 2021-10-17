@@ -12,10 +12,10 @@ module.exports = {
       ref: 'origin/master',
       repo: 'git@github.com:maidangzhu/downzoo-moneybook-web.git',
       path: '/home/downzoo/downzoo-moneybook/downzoo-moneybook-web',
-      'post-deploy': 'git reset --hard && git checkout master && git pull && npm i --production=false && npm run build:release && pm2 startOrReload ecosystem.config.js', // -production=false 下载全量包
+      'post-deploy': 'git reset --hard && git checkout master && git pull && npm i --production=false && pm2 startOrReload ecosystem.config.js',
       env: {
         NODE_ENV: 'production'
-      }
+      },
     }
   }
 }
