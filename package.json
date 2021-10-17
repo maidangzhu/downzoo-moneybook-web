@@ -5,6 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
+    "build:release": "vite build --mode release"
   },
   "dependencies": {
     "axios": "^0.21.1",
