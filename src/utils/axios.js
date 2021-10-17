@@ -3,7 +3,7 @@ import { Toast } from 'zarm';
 
 const MODE = import.meta.env.MODE; // 环境变量
 
-axios.defaults.baseURL = MODE === 'development' ? '' : 'http://www.downzoo-moneybook/';
+axios.defaults.baseURL = MODE === 'development' ? '' : 'http://121.41.2.76:7001';
 axios.defaults.withCredentials = true
 axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest'
 axios.defaults.headers['Authorization'] = `${localStorage.getItem('token') || null}`;
