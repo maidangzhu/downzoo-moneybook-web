@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
-import {Cell, Modal, Input, Button, Toast, FilePicker} from 'zarm';
+import {Cell, Modal, Input, Button, Toast} from 'zarm';
 import {get, post, imgUrlTrans} from '@/utils';
 
 import s from './style.module.less';
@@ -65,11 +65,6 @@ const User = () => {
         onClick={() => history.push('/account')}
         icon={<img style={{width: 20, verticalAlign: '-7px'}} src="//s.yezgea02.com/1615974766264/zhaq.png" alt=""/>}
       />
-      {/* <Cell
-      hasArrow
-      title="我的标签"
-      icon={<img style={{ width: 20, verticalAlign: '-7px' }} src="//s.yezgea02.com/1619321650235/mytag.png" alt="" />}
-    /> */}
       <Cell
         hasArrow
         title="关于我们"

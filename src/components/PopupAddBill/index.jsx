@@ -51,8 +51,8 @@ const PopupAddBill = forwardRef(({detail = {}, onReload}, ref) => {
       const data = await get('/api/type/list');
       const {list} = data;
 
-      const _expense = list.filter(i => i.type === 1); // 支出类型
-      const _income = list.filter(i => i.type === 2); // 收入类型
+      const _expense = list.filter(i => Number(i.type) === 1); // 支出类型
+      const _income = list.filter(i => Number(i.type) === 2); // 收入类型
 
       setExpense(_expense);
       setIncome(_income);

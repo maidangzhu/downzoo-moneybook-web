@@ -54,8 +54,8 @@ const UserInfo = () => {
       avatar
     });
 
-    Toast.show('修改成功')
-    history.goBack()
+    Toast.show('修改成功');
+    history.goBack();
   }
 
   return <>
